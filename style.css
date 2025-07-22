@@ -1,0 +1,122 @@
+body {
+    font-family: "Josefin Sans", Roboto, monospace;
+    max-width: 1499px;
+    margin-inline: auto;
+}
+
+.f-winky {
+    font-family: "Winky Rough", monospace;
+
+}
+
+.book {
+    /* height: 100vh; */
+      width: 100%;
+}
+#page-1 {
+    background: url("./img/front.png") center center no-repeat;
+    background-position: center;
+    /* width: 600px; */
+}
+.book > div {
+    /* position: relative!important;
+    
+    max-height: 800px;
+min-height: 700px; */
+
+}
+#for-later-use {
+
+    clip-path: polygon(
+    100% 2%,   /* right-top */
+    0% 0%,     /* left-top slightly lower = \ effect */
+    0% 100%,    /* left-bottom slightly higher = / effect */
+    100% 98%  /* right-bottom */
+    );
+}
+.book > div {
+    /* transform: skewY(1deg);
+     */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3),
+            0 4px 6px -4px rgba(0, 0, 0, 0.3);
+;
+height: 720px;
+max-height: 800px;
+min-height: 100%;
+    border-radius: 1rem;
+    /* border-bottom: black 10px solid; */
+    color: #5b3b17;
+    display: flex;
+    flex: 1;
+    
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(270deg, #ffffff, #ffe0ef, #fff1e7, #fff2f8);
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    /* animation: gradientMove 10s ease infinite; */
+    /* h-full rounded-md border-b-2 text-[#5b3b17] flex flex-1 flex-col gap-4 justify-center items-center */
+}
+
+.center-line {
+    display: none!important;
+
+    position: absolute;
+    top: 5%;
+    bottom: 0;
+    left: 50%;
+    /* width: 6rem; */
+    width: 5px;
+    height: 90%!important;
+    transform: translateX(-50%);
+    /* background: url("./img/separator.png"); */
+    /* background: repeating-linear-gradient(
+      to bottom,
+      #474747,
+      #adadad 10px,
+      #bcbcbc 10px,
+      #4d4d4d 20px
+    ); */
+    box-shadow: inset 0 0 10px rgba(65, 65, 65, 0.6);
+    z-index: 10;
+    border-radius: 5px;
+  }
+
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+#pen {
+    animation: animatePen infinite 5s ease-in-out;
+}
+@keyframes animatePen {
+    0% {
+        transform: translateX(0rem);
+    }
+    50% {
+        transform: translateX(-12ch );
+    }
+    100% {
+        transform: translateX(0rem);
+    }
+    
+}
+@media screen and (max-width: 600px) { 
+
+    .center-line{
+        display: none!important;
+    }
+    .book > div > div {
+        
+    }
+ }   
